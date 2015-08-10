@@ -3,7 +3,7 @@ function Visit () {
 
 Visit.prototype.focus_listener = function() {
 	var self = this
-	$(window).blur(function () { 
+	$(window).focus(function () { 
 	 	this.isActive = true; 
 	 	self.set_blur_end_time()
 	}) 
@@ -28,5 +28,5 @@ Visit.prototype.set_blur_end_time = function() {
 
 Visit.prototype.calculate_away_time = function() {
 	this.away_time = this.blur_end_time - this.blur_start_time
-	console.log(this.away_time / 100)
+	console.log(this.away_time / 1000)
 };	
