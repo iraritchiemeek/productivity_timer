@@ -1,3 +1,6 @@
 $(window).load(function(){
-	console.log(yes)
+	var visit = new Visit
+
+	visit.focus_listener()
+	visit.blur_listener()
 })
